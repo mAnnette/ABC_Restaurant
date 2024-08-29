@@ -12,17 +12,15 @@ public class AdminDashboardDAO {
     private static final String USER = "root";
     private static final String PASSWORD = "Isuranga@123";
 
-    // Constructor
     public AdminDashboardDAO() {
         try {
-            // Load the MySQL JDBC driver
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    // Method to get the total number of reservations
+  
     public int getTotalReservations() throws SQLException {
         int count = 0;
         String query = "SELECT COUNT(*) FROM reservations";
@@ -35,12 +33,12 @@ public class AdminDashboardDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            throw e; // Re-throwing for further handling if needed
+            throw e; 
         }
         return count;
     }
 
-    // Method to get the total number of customers
+  
     public int getTotalCustomers() throws SQLException {
         int count = 0;
         String query = "SELECT COUNT(*) FROM customers";
@@ -53,12 +51,12 @@ public class AdminDashboardDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            throw e; // Re-throwing for further handling if needed
+            throw e; 
         }
         return count;
     }
 
-    // Method to get the total number of active promotions
+    
     public int getActivePromotions() throws SQLException {
         int count = 0;
         String query = "SELECT COUNT(*) FROM promotions WHERE active = true";
@@ -71,12 +69,11 @@ public class AdminDashboardDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            throw e; // Re-throwing for further handling if needed
         }
         return count;
     }
 
-    // Method to get the total number of staff on duty
+
     public int getStaffOnDuty() throws SQLException {
         int count = 0;
         String query = "SELECT COUNT(*) FROM staff WHERE on_duty = true";
@@ -89,7 +86,7 @@ public class AdminDashboardDAO {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            throw e; // Re-throwing for further handling if needed
+            throw e; 
         }
         return count;
     }

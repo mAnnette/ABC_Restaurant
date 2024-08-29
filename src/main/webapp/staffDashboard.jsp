@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Staff Dashboard</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/style.css"> <!-- Custom CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>

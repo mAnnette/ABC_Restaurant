@@ -30,20 +30,18 @@ public class StaffServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         super.init();
-        // Initialize DAOs
         restaurantDAO = new RestaurantDAO();
         staffDAO = new StaffDAO();
     }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Get the action parameter, or set default to "list"
         String action = request.getParameter("action");
         if (action == null) {
-            action = "list"; // Set a default action if none is provided
+            action = "list"; 
         }
 
-        // Get the staff ID parameter
+ 
         String idParam = request.getParameter("id");
 
         switch (action) {
@@ -52,7 +50,7 @@ public class StaffServlet extends HttpServlet {
                     try {
                         int id = Integer.parseInt(idParam);
                         StaffDAO.deleteStaff(id);
-                        response.sendRedirect("staff?action=list"); // Redirect to the list page after deletion
+                        response.sendRedirect("staff?action=list"); 
                     } catch (NumberFormatException e) {
                         e.printStackTrace();
                         response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid staff ID format");
@@ -78,10 +76,10 @@ public class StaffServlet extends HttpServlet {
 
     private void listStaff(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Staff> staffList = StaffDAO.getAllStaff();
-        RestaurantDAO restaurantDAO = new RestaurantDAO(); // Create instance of RestaurantDAO
+        RestaurantDAO restaurantDAO = new RestaurantDAO(); 
         List<Restaurant> restaurantList;
         try {
-            restaurantList = restaurantDAO.getAllRestaurants(); // Call non-static method
+            restaurantList = restaurantDAO.getAllRestaurants(); 
         } catch (SQLException e) {
             throw new ServletException("Error fetching restaurants", e);
         }
@@ -92,7 +90,7 @@ public class StaffServlet extends HttpServlet {
 
     private void showCreateForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            List<Restaurant> restaurantList = restaurantDAO.getAllRestaurants(); // Fetch all restaurants
+            List<Restaurant> restaurantList = restaurantDAO.getAllRestaurants(); 
             request.setAttribute("restaurantList", restaurantList);
             request.getRequestDispatcher("/createStaff.jsp").forward(request, response);
         } catch (SQLException e) {
@@ -109,7 +107,7 @@ public class StaffServlet extends HttpServlet {
                 Staff staff = staffDAO.getStaffById(id);
                 if (staff != null) {
                     try {
-                        List<Restaurant> restaurantList = restaurantDAO.getAllRestaurants(); // Fetch all restaurants
+                        List<Restaurant> restaurantList = restaurantDAO.getAllRestaurants(); 
                         request.setAttribute("restaurantList", restaurantList);
                         request.setAttribute("staff", staff);
                         request.getRequestDispatcher("/editStaff.jsp").forward(request, response);

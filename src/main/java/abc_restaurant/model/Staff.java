@@ -13,10 +13,9 @@ public class Staff implements Serializable {
 	    private Timestamp createdAt;
 	    private int restaurantId;
 
-	    // Default constructor
+
 	    public Staff() {}
 
-	    // Parameterized constructor
 	    public Staff(int id, String username, String password, String position, Timestamp createdAt, int restaurantId) {
 	        this.id = id;
 	        this.username = username;
@@ -25,8 +24,7 @@ public class Staff implements Serializable {
 	        this.createdAt = createdAt;
 	        this.restaurantId = restaurantId;
 	    }
-
-	    // Getters and Setters
+	    
 	    public int getId() {
 	        return id;
 	    }
