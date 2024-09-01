@@ -44,8 +44,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="facility?action=list">Manage Facilities</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="logout.jsp">Logout</a>
+                         <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/adminLogout.jsp">Logout</a>
                         </li>
                     </ul>
                 </div>
