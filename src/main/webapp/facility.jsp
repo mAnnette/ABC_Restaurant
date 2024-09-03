@@ -35,7 +35,6 @@
                          <img src="images/uploads/${facility.image}" alt="${facility.name}">
                         <h3>${facility.name}</h3>
                         <p>${facility.description}</p>
-                        <p><strong>Location:</strong> ${facility.location}</p>
                     </div>
                 </div>
             </c:forEach>
