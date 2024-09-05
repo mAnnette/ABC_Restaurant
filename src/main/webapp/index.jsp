@@ -8,14 +8,28 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Set a fixed height for the carousel */
+        .carousel-item img {
+            height: 500px; /* Set desired height */
+            object-fit: cover; /* Ensures the image covers the container without distortion */
+        }
+
+        /* Optional: Adjust for smaller screens */
+        @media (max-width: 768px) {
+            .carousel-item img {
+                height: 300px; /* Set a smaller height for smaller screens */
+            }
+        }
+    </style>
 </head>
 <body>
 <!-- header -->
     <jsp:include page="header.jsp" />
-   
 
     <!-- Carousel/Slider -->
-    <div id="carouselExampleIndicators" class="carousel slide mt-4">
+    <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="3000">
         <ol class="carousel-indicators">
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
             <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
@@ -23,13 +37,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/uploads/image slider1.jpeg" class="d-block w-100" alt="...">
+                <img src="images/uploads/image slider1.jpeg" class="d-block w-100" alt="Image 1">
             </div>
             <div class="carousel-item">
-                <img src="images/uploads/image slider2.jpeg" class="d-block w-100" alt="...">
+                <img src="images/uploads/image slider2.jpeg" class="d-block w-100" alt="Image 2">
             </div>
             <div class="carousel-item">
-                <img src="images/uploads/image slider3.jpeg" class="d-block w-100" alt="...">
+                <img src="images/uploads/image slider3.jpeg" class="d-block w-100" alt="Image 3">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
@@ -42,8 +56,6 @@
         </a>
     </div>
 
-    
-    
     <!--footer -->
     <jsp:include page="footer.jsp" />
 

@@ -16,7 +16,8 @@ public class Reservation implements Serializable {
 	    private String additionalRequests;
 	    private String status; 
 	    private String customerName;
-	    private String customerEmail; 
+	    private String customerEmail;
+	    private String restaurantName;
 
 	
 	    public Reservation() {}
@@ -116,6 +117,14 @@ public class Reservation implements Serializable {
 
 	    public void setCustomerEmail(String customerEmail) { 
 	        this.customerEmail = customerEmail;
+	    }
+	    
+	    public String getRestaurantName() {
+	        return restaurantName;
+	    }
+
+	    public void setRestaurantName(String restaurantName) {
+	        this.restaurantName = restaurantName;
 	    }
 
 }
