@@ -88,7 +88,7 @@ public class ReservationServlet extends HttpServlet {
                 request.setAttribute("availabilityMessage", "The selected time slot is available. Please confirm your reservation.");
                 makeReservation(request, response);
             } else {
-                request.setAttribute("availabilityMessage", "Sorry, this time slot is fully booked. Please choose another time or reduce the number of guests.");
+                request.setAttribute("availabilityMessage", "Sorry, this time slot is fully booked. Please choose another time.");
                 showReservationForm(request, response);
             }
 

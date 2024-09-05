@@ -10,19 +10,7 @@
 </head>
 <body>
   
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">ABC Restaurant</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.jsp">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.jsp">Login</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+   <jsp:include page="header.jsp" />
 
 
     <div class="container mt-4">

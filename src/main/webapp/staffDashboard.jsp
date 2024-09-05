@@ -13,7 +13,10 @@
     <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" style="width: 280px;">
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
             <svg class="bi pe-none me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            <span class="fs-4">Sidebar</span>
+
+            <h2><a class="navbar-brand" href="index.jsp">ABC Restaurant</a></h2>
+                    <h2 class="sidebar-heading">Staff Menu</h2>
+                    <ul class="nav flex-column">
         </a>
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">

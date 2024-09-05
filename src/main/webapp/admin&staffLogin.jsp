@@ -11,13 +11,15 @@
 </head>
 <body>
   
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">ABC Restaurant</a>
-    </nav>
+    <div class="container d-flex justify-content-center mt-4">
+        <a href="${pageContext.request.contextPath}/index.jsp" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+            <img src="${pageContext.request.contextPath}/images/uploads/logo.png" alt="ABC Restaurant Logo" width="100" height="100" class="me-2">
+        </a>
+    </div>
 
  
     <div class="container mt-4">
-        <h2>Login</h2>
+        <h2>Admin and Staff Member Login</h2>
         <form action="AdminStaffLoginServlet" method="get">
             <div class="form-group">
                 <label for="role">Role:</label>
