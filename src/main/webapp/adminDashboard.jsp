@@ -36,7 +36,7 @@
                             <a class="nav-link" href="#">Generate Reports</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Manage Promotions</a>
+                            <a class="nav-link" href="offers?action=list">Manage Offers</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="service?action=list">Manage Services</a>
