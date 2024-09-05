@@ -21,7 +21,7 @@
                 <textarea class="form-control" id="description" name="description" required></textarea>
             </div>
             <div class="form-group">
-                <label for="image">Image (URL or path to the image):</label>
+                <label for="image">Image (imagename.jpg/ .jpeg/ .png):</label>
                 <textarea class="form-control" id="image" name="image" required></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Create Service</button>
