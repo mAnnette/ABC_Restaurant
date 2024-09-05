@@ -23,8 +23,8 @@
     				Manage Reservations
 				</a>
             </li>
-            <li>
-                <a href="staffDashboard.jsp?action=viewQueries" class="nav-link <% if ("viewQueries".equals(request.getParameter("action"))) { %> active <% } %>">
+             <li>
+                <a href="${pageContext.request.contextPath}/staff/viewQueries" class="nav-link <% if ("viewQueries".equals(request.getParameter("action"))) { %> active <% } %>">
                     <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
                     Respond to Queries
                 </a>

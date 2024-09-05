@@ -149,5 +149,23 @@ public class StaffDAO {
 	        }
 	        return false;
 	    }
+	    
+	    public Staff getStaffByUsername(String username) throws SQLException {
+	        String sql = "SELECT * FROM staff WHERE username = ?";
+	        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+	             PreparedStatement ps = con.prepareStatement(sql)) {
+	            ps.setString(1, username);
+	            try (ResultSet rs = ps.executeQuery()) {
+	                if (rs.next()) {
+	                    Staff staff = new Staff();
+	                    staff.setId(rs.getInt("id"));
+	                    staff.setUsername(rs.getString("username"));
+	                    staff.setPassword(rs.getString("password"));
+	                    return staff;
+	                }
+	            }
+	        }
+	        return null;
+	    }
 
 }
