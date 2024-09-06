@@ -86,9 +86,17 @@ public class ReservationServlet extends HttpServlet {
 
             if (isAvailable) {
                 request.setAttribute("availabilityMessage", "The selected time slot is available. Please confirm your reservation.");
-                makeReservation(request, response);
+                request.setAttribute("restaurantId", restaurantId);
+                request.setAttribute("reservationType", reservationType);
+                request.setAttribute("date", date);
+                request.setAttribute("time", time);
+                request.setAttribute("guests", numberOfGuests);
+                
+                request.setAttribute("isAvailable", true);
+                
+                showReservationForm(request, response);
             } else {
-                request.setAttribute("availabilityMessage", "Sorry, this time slot is fully booked. Please choose another time.");
+                request.setAttribute("availabilityMessage", "Sorry, this time slot is fully booked. Please choose another time or reduce the number of guests.");
                 showReservationForm(request, response);
             }
 
@@ -122,7 +130,7 @@ public class ReservationServlet extends HttpServlet {
                 Reservation reservation = new Reservation(0, customer.getId(), restaurantId, reservationType, reservationDateTime, numberOfGuests, additionalFacilities, "Pending", customer.getFirstName() + " " + customer.getLastName(), customer.getEmail());
 
                 reservationDAO.createReservation(reservation);
-               
+                
                 request.setAttribute("reservation", reservation);
                 request.getRequestDispatcher("/reservationConfirmation.jsp").forward(request, response);
             } catch (SQLException e) {
