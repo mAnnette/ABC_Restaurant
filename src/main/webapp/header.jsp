@@ -93,7 +93,7 @@
            
             <ul class="nav col-12 col-lg-auto nav-menu mb-2 justify-content-center mb-md-0">
                 <li><a href="index.jsp" class="nav-link px-2 link-secondary">Home</a></li>
-                <li><a href="#" class="nav-link px-2 link-body-emphasis">About Us</a></li>
+                <li><a href="${pageContext.request.contextPath}/aboutUs.jsp" class="nav-link px-2 link-body-emphasis">About Us</a></li>
                 <li><a href="${pageContext.request.contextPath}/facility?action=show" class="nav-link px-2 link-body-emphasis">Facilities</a></li>
                 <li><a href="${pageContext.request.contextPath}/service?action=show" class="nav-link px-2 link-body-emphasis">Services</a></li>
                 <li><a href="${pageContext.request.contextPath}/menuItem?action=listMenuItemsForCustomer" class="nav-link px-2 link-body-emphasis">Menu</a></li>
