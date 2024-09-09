@@ -33,8 +33,8 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Generate Reports</a>
-                        </li>
+					        <a class="nav-link" href="${pageContext.request.contextPath}/generateReport.jsp">Generate Reports</a> 
+					    </li>
                         <li class="nav-item">
                             <a class="nav-link" href="offers?action=list">Manage Offers</a>
                         </li>

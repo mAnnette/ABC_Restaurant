@@ -200,5 +200,36 @@ public class ReservationDAO {
         }
         return reservations;
     }
+    
+    public List<Reservation> generateReservationReport(Timestamp startDate, Timestamp endDate, String status) throws SQLException {
+        String query = "SELECT * FROM reservations WHERE created_at BETWEEN ? AND ? AND status = ?";
+        List<Reservation> reservations = new ArrayList<>();
+
+        try (Connection con = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement ps = con.prepareStatement(query)) {
+            ps.setTimestamp(1, startDate);
+            ps.setTimestamp(2, endDate);
+            ps.setString(3, status);
+
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    Reservation reservation = new Reservation();
+                    reservation.setId(rs.getInt("id"));
+                    reservation.setCustomerId(rs.getInt("customer_id"));
+                    reservation.setRestaurantId(rs.getInt("restaurant_id"));
+                    reservation.setReservationDateTime(rs.getTimestamp("reservation_date"));
+                    reservation.setReservationType(rs.getString("reservation_type"));
+                    reservation.setNumberOfGuests(rs.getInt("number_of_guests"));
+                    reservation.setAdditionalFacilities(rs.getString("additional_facilities"));
+                    reservation.setStatus(rs.getString("status"));
+                    reservation.setCustomerName(rs.getString("customer_name"));  
+                    reservation.setCustomerEmail(rs.getString("customer_email"));
+                    
+                    reservations.add(reservation);
+                }
+            }
+        }
+        return reservations;
+    }
 
 }
