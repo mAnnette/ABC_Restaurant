@@ -31,7 +31,7 @@
                 <p><strong>Reservation Type:</strong> <%= reservation.getReservationType() %></p>
                 <p><strong>Date & Time:</strong> <%= reservation.getReservationDateTime() %></p>
                 <p><strong>Number of Guests:</strong> <%= reservation.getNumberOfGuests() %></p>
-                <p><strong>Additional Requests:</strong> <%= reservation.getAdditionalRequests() %></p>
+                <p><strong>Additional Requests:</strong> <%= reservation.getAdditionalFacilities() %></p>
                 <p><strong>Status:</strong> <%= reservation.getStatus() %></p>
                 <% } else { %>
                     <p>Sorry, there was an error retrieving your reservation details.</p>

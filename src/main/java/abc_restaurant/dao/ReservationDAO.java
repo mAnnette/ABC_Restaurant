@@ -37,7 +37,7 @@ public class ReservationDAO {
             ps.setTimestamp(3, reservation.getReservationDateTime());
             ps.setString(4, reservation.getReservationType());
             ps.setInt(5, reservation.getNumberOfGuests());
-            ps.setString(6, reservation.getAdditionalRequests());
+            ps.setString(6, reservation.getAdditionalFacilities());
             ps.setString(7, reservation.getStatus());
             ps.setString(8, reservation.getCustomerName()); 
             ps.setString(9, reservation.getCustomerEmail()); 
@@ -121,7 +121,7 @@ public class ReservationDAO {
                     reservation.setReservationDateTime(rs.getTimestamp("reservation_date"));
                     reservation.setReservationType(rs.getString("reservation_type"));
                     reservation.setNumberOfGuests(rs.getInt("number_of_guests"));
-                    reservation.setAdditionalRequests(rs.getString("additional_facilities"));
+                    reservation.setAdditionalFacilities(rs.getString("additional_facilities"));
                     reservation.setStatus(rs.getString("status"));
                     reservations.add(reservation);
                 }
@@ -148,7 +148,7 @@ public class ReservationDAO {
                     reservation.setReservationDateTime(rs.getTimestamp("reservation_date"));
                     reservation.setReservationType(rs.getString("reservation_type"));
                     reservation.setNumberOfGuests(rs.getInt("number_of_guests"));
-                    reservation.setAdditionalRequests(rs.getString("additional_facilities"));
+                    reservation.setAdditionalFacilities(rs.getString("additional_facilities"));
                     reservation.setStatus(rs.getString("status"));
                     reservation.setCustomerName(rs.getString("customer_name"));  
                     reservation.setCustomerEmail(rs.getString("customer_email"));
@@ -192,7 +192,7 @@ public class ReservationDAO {
                     reservation.setReservationDateTime(rs.getTimestamp("reservation_date"));
                     reservation.setReservationType(rs.getString("reservation_type"));
                     reservation.setNumberOfGuests(rs.getInt("number_of_guests"));
-                    reservation.setAdditionalRequests(rs.getString("additional_facilities"));
+                    reservation.setAdditionalFacilities(rs.getString("additional_facilities"));
                     reservation.setStatus(rs.getString("status"));
                     reservations.add(reservation);
                 }

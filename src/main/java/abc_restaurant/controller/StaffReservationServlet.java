@@ -105,7 +105,7 @@ public class StaffReservationServlet extends HttpServlet {
                "Date & Time: " + reservation.getReservationDateTime() + "\n" +
                "Type: " + reservation.getReservationType() + "\n" +
                "Number of Guests: " + reservation.getNumberOfGuests() + "\n" +
-               "Additional Requests: " + reservation.getAdditionalRequests() + "\n\n" +
+               "Additional Requests: " + reservation.getAdditionalFacilities() + "\n\n" +
                "We look forward to serving you.\n\n" +
                "Best Regards,\n" +
                "ABC Restaurant";
@@ -120,7 +120,7 @@ public class StaffReservationServlet extends HttpServlet {
                "Date & Time: " + reservation.getReservationDateTime() + "\n" +
                "Type: " + reservation.getReservationType() + "\n" +
                "Number of Guests: " + reservation.getNumberOfGuests() + "\n" +
-               "Additional Requests: " + reservation.getAdditionalRequests() + "\n\n" +
+               "Additional Requests: " + reservation.getAdditionalFacilities() + "\n\n" +
                "If you have any questions, please contact us.\n\n" +
                "Best Regards,\n" +
                "ABC Restaurant";

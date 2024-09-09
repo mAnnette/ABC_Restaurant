@@ -34,7 +34,7 @@
                             <td>${reservation.reservationDateTime}</td>
                             <td>${reservation.reservationType}</td>
                             <td>${reservation.numberOfGuests}</td>
-                            <td>${reservation.additionalRequests}</td>
+                            <td>${reservation.additionalFacilities}</td>
                             <td>${reservation.status}</td>
                             <td>
                                 <c:if test="${reservation.status == 'Pending'}">

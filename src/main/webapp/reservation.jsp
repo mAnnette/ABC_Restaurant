@@ -68,20 +68,19 @@
             </div>
 
             
-            <div class="form-group mt-3">
-                <label for="facilities">Additional Facilities/Services:</label>
-                <c:forEach var="facility" items="${facilityList}">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="facility${facility.id}" name="facilityIds" value="${facility.name}"
-                            <c:if test="${fn:contains(param.facilityIds, facility.name)}">checked</c:if>>
-                        <label class="form-check-label" for="facility${facility.id}">
-                            ${facility.name}
-                        </label>
-                    </div>
-                </c:forEach>
-            </div>
-
-       
+            <!-- Additional Facilities/Services -->
+			<div class="form-group mt-3">
+			    <label for="facilities">Additional Facilities/Services:</label>
+			    <c:forEach var="facility" items="${facilityList}">
+			        <div class="form-check">
+			            <input class="form-check-input" type="checkbox" id="facility${facility.id}" name="facilityIds" value="${facility.name}">
+			            <label class="form-check-label" for="facility${facility.id}">
+			                ${facility.name}
+			            </label>
+			        </div>
+			    </c:forEach>
+			</div>
+			       
             <button type="submit" class="btn btn-secondary mt-3">Check Availability</button>
         </form>
 

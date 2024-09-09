@@ -3,6 +3,7 @@ package abc_restaurant.controller;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -96,7 +97,7 @@ public class ReservationServlet extends HttpServlet {
                 
                 showReservationForm(request, response);
             } else {
-                request.setAttribute("availabilityMessage", "Sorry, this time slot is fully booked. Please choose another time or reduce the number of guests.");
+                request.setAttribute("availabilityMessage", "Sorry, this time slot is fully booked. Please choose another time or date.");
                 showReservationForm(request, response);
             }
 
@@ -124,8 +125,10 @@ public class ReservationServlet extends HttpServlet {
                 Timestamp reservationDateTime = Timestamp.valueOf(date + " " + time + ":00");
                 int numberOfGuests = Integer.parseInt(request.getParameter("guests"));
                 String[] facilityIds = request.getParameterValues("facilityIds");
+                System.out.println("Selected facilities: " + Arrays.toString(facilityIds));
 
                 String additionalFacilities = (facilityIds != null) ? String.join(", ", facilityIds) : "";
+                System.out.println("Facilities to save: " + additionalFacilities);
 
                 Reservation reservation = new Reservation(0, customer.getId(), restaurantId, reservationType, reservationDateTime, numberOfGuests, additionalFacilities, "Pending", customer.getFirstName() + " " + customer.getLastName(), customer.getEmail());
 

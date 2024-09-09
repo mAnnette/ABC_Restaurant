@@ -13,7 +13,7 @@ public class Reservation implements Serializable {
 	    private String reservationType;
 	    private Timestamp reservationDateTime;
 	    private int numberOfGuests;
-	    private String additionalRequests;
+	    private String additionalFacilities;
 	    private String status; 
 	    private String customerName;
 	    private String customerEmail;
@@ -25,14 +25,14 @@ public class Reservation implements Serializable {
 	
 	    public Reservation(int id, int customerId, int restaurantId, String reservationType, 
 	            Timestamp reservationDateTime, int numberOfGuests, 
-	            String additionalRequests, String status, String customerName, String customerEmail) {
+	            String additionalFacilities, String status, String customerName, String customerEmail) {
 	        this.id = id;
 	        this.customerId = customerId;
 	        this.restaurantId = restaurantId;
 	        this.reservationType = reservationType;
 	        this.reservationDateTime = reservationDateTime;
 	        this.numberOfGuests = numberOfGuests;
-	        this.additionalRequests = additionalRequests;
+	        this.additionalFacilities = additionalFacilities;
 	        this.status = status;
 	        this.customerName = customerName;  
 	        this.customerEmail = customerEmail; 
@@ -87,12 +87,12 @@ public class Reservation implements Serializable {
 	        this.numberOfGuests = numberOfGuests;
 	    }
 
-	    public String getAdditionalRequests() {
-	        return additionalRequests;
+	    public String getAdditionalFacilities() {
+	        return additionalFacilities;
 	    }
 
-	    public void setAdditionalRequests(String additionalRequests) {
-	        this.additionalRequests = additionalRequests;
+	    public void setAdditionalFacilities(String additionalFacilities) {
+	        this.additionalFacilities = additionalFacilities;
 	    }
 
 	    public String getStatus() {

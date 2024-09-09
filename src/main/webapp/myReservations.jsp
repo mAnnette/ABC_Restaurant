@@ -37,7 +37,7 @@
                             <td>${reservation.reservationDateTime}</td>
                             <td>${reservation.reservationType}</td>
                             <td>${reservation.numberOfGuests}</td>
-                            <td>${reservation.additionalRequests}</td>
+                            <td>${reservation.additionalFacilities}</td>
                             <td>${reservation.status}</td>
                             <td>
                                 <a href="${pageContext.request.contextPath}/customer/query?reservationId=${reservation.id}" class="btn btn-primary btn-sm">Submit Query</a>
