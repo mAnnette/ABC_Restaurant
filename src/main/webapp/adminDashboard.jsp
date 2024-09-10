@@ -48,6 +48,9 @@
                             <a class="nav-link" href="${pageContext.request.contextPath}/admin/viewQueries">Respond to Customer Queries</a>
                         </li>
                          <li class="nav-item">
+                            <a class="nav-link" href="${pageContext.request.contextPath}/gallery?action=list">Manage Gallery</a> 
+                        </li>
+                         <li class="nav-item">
                             <a class="nav-link" href="${pageContext.request.contextPath}/adminLogout.jsp">Logout</a>
                         </li>
                     </ul>
