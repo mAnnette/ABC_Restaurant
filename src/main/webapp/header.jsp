@@ -97,7 +97,7 @@
                 <li><a href="${pageContext.request.contextPath}/facility?action=show" class="nav-link px-2 link-body-emphasis">Facilities</a></li>
                 <li><a href="${pageContext.request.contextPath}/service?action=show" class="nav-link px-2 link-body-emphasis">Services</a></li>
                 <li><a href="${pageContext.request.contextPath}/menuItem?action=listMenuItemsForCustomer" class="nav-link px-2 link-body-emphasis">Menu</a></li>
-                <li><a href="#" class="nav-link px-2 link-body-emphasis">Gallery</a></li>
+                <li><a href="${pageContext.request.contextPath}/gallery?action=showGalleryForCustomer" class="nav-link px-2 link-body-emphasis">Gallery</a></li>
                 <li><a href="${pageContext.request.contextPath}/offers?action=listOffersForCustomer" class="nav-link px-2 link-body-emphasis">Offers</a></li>
               
             </ul>

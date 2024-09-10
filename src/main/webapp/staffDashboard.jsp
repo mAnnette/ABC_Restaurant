@@ -32,6 +32,18 @@
                     Respond to Queries
                 </a>
             </li>
+             <li>
+			    <a href="${pageContext.request.contextPath}/category?action=list" class="nav-link <% if ("viewCategories".equals(request.getParameter("action"))) { %> active <% } %>">
+			        <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+			        Manage Categories
+			    </a>
+			</li>
+			  <li>
+                <a href="${pageContext.request.contextPath}/menuItem?action=list" class="nav-link <% if ("viewMenuItems".equals(request.getParameter("action"))) { %> active <% } %>">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#menu"></use></svg>
+                    Manage Menu Items
+                </a>
+            </li>
             <li>
                 <a href="staffDashboard.jsp?action=viewPayments" class="nav-link <% if ("viewPayments".equals(request.getParameter("action"))) { %> active <% } %>">
                     <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
